@@ -89,7 +89,10 @@ def main(argv):
 def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomposition=False):
 
     """
-    Program which detects outliers in xarray.dataset
+    Function which detects outliers in a xarray.Dataset
+
+    Inputs
+    ------
     nc            : (xarray.Dataset)
     method        : Local Outlier Factor (LOF), Robust Covariance (RC), Isolation Forest (IF)
     contamination : Contamination fraction from 0 to 1
@@ -99,9 +102,10 @@ def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomp
     lonname       : (string) with longitude label
     timname       : (string) with time label
 
-    Returns:
-    foo : (xarray.DataArray) containing freq, mean, std
-    csv : (pd.DataFrame) containing time, lat, lon, value, mean, std
+    Returns
+    -------
+    foo           : (xarray.DataArray) containing freq, mean, std
+    csv           : (pd.DataFrame) containing time, lat, lon, value, mean, std
     """
 
     var    = nc[varname]
