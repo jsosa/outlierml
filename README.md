@@ -29,6 +29,8 @@ contamination = Contamination fraction from 0 to 1
 decomposition = True or False time series to deseasonalization
 ```
 
+The command-line program generates two files: `stats.nc` and `log.csv` containing information on when and where outliers happened.
+
 The outlierml module can also be called via
 
 ```python
