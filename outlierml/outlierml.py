@@ -30,6 +30,7 @@ def main(argv):
     method        : Local Outlier Factor (LOF), Robust Covariance (RC), Isolation Forest (IF)
     outputdir     : Output directory
     contamination : Contamination fraction from 0 to 1
+    decomposition : True or False time series to deseasonalization
     """
 
     opts, args = getopt.getopt(argv,"i:")
@@ -85,13 +86,14 @@ def main(argv):
     csv.to_csv(outputdir+'log.csv')
     foo.to_netcdf(outputdir+'stats.nc',encoding={'myfreq': {'zlib': True},'mymean': {'zlib': True},'mystd': {'zlib': True}})
 
-def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomposition):
+def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomposition=False):
 
     """
     Program which detects outliers in xarray.dataset
     nc            : (xarray.Dataset)
     method        : Local Outlier Factor (LOF), Robust Covariance (RC), Isolation Forest (IF)
     contamination : Contamination fraction from 0 to 1
+    decomposition : True or False time series to deseasonalization
     varname       : (string) with varname label
     latname       : (string) with latitude label
     lonname       : (string) with longitude label
