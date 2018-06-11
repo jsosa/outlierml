@@ -37,6 +37,25 @@ from outlierml import run_outlierml
 
 where `run_outlierml` is a function which receives the `xarray.Dataset` object to be analised and returns 1) a mask containing outliers in a `xarray.DataArray` object and a `pd.DataFrame` object
 
+```python
+def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomposition=False):
+
+    """
+    Program which detects outliers in xarray.dataset
+    nc            : (xarray.Dataset)
+    method        : Local Outlier Factor (LOF), Robust Covariance (RC), Isolation Forest (IF)
+    contamination : Contamination fraction from 0 to 1
+    decomposition : True or False time series to deseasonalization
+    varname       : (string) with varname label
+    latname       : (string) with latitude label
+    lonname       : (string) with longitude label
+    timname       : (string) with time label
+
+    Returns:
+    foo : (xarray.DataArray) containing freq, mean, std
+    csv : (pd.DataFrame) containing time, lat, lon, value, mean, std
+ ```
+
 ### [Isolation forest](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
 One efficient way of performing outlier detection in high-dimensional datasets
 is to use random forests. The ensemble.IsolationForest ‘isolates’ observations
