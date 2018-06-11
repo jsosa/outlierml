@@ -1,0 +1,2 @@
+# outlierml
+Outlier detection library
