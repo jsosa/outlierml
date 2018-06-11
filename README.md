@@ -14,8 +14,6 @@ Just run this line
 - [xarray](http://xarray.pydata.org/en/stable/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
-Pandas, xarray and scikit-learn
-
 It includes a command-line tool that can be called through
 
 ```>> outlierml -i <initfile>```
