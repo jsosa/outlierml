@@ -32,6 +32,7 @@ by randomly selecting a feature and then randomly selecting a split value betwee
 the maximum and minimum values of the selected feature.
 
 **References:**
+
 Liu, Fei Tony, Ting, Kai Ming and Zhou, Zhi-Hua. “Isolation forest.” Data Mining, 2008.
 ICDM‘08. Eighth IEEE International Conference on.
 
@@ -42,6 +43,7 @@ of a given data point with respect to its neighbors. The idea is to detect the s
 a substantially lower density than their neighbors.
 
 **References:**
+
 Breunig, Kriegel, Ng, and Sander (2000) LOF: identifying density-based local outliers.
 Proc. ACM SIGMOD
 
@@ -51,5 +53,6 @@ robust covariance estimate to the data, and thus fits an ellipse to the central
 data points, ignoring points outside the central mode.
 
 **References:**
+
 Rousseeuw, P.J., Van Driessen, K. “A fast algorithm for the minimum covariance determinant estimator”.
 Technometrics 41(3), 212 (1999)
