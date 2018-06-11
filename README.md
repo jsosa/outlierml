@@ -26,7 +26,7 @@ file          = NetCDF file path
 method        = <LOF> for Local Outlier Factor , <RC> for Robust Covariance , <IF> for Isolation Forest
 outputdir     = Output directory
 contamination = Contamination fraction from 0 to 1
-decomposition = True or False time series to deseasonalization
+decomposition = True or False to deseasonalize time series
 ```
 
 The command-line program generates two files: `stats.nc` and `log.csv` containing information on when and where outliers happened.
@@ -37,7 +37,7 @@ The outlierml module can also be called via
 from outlierml import run_outlierml
 ```
 
-where `run_outlierml` is a function which receives the `xarray.Dataset` object to be analised and returns 1) a mask containing outliers in a `xarray.DataArray` object and a `pd.DataFrame` object
+where `run_outlierml` is a function which receives a `xarray.Dataset` object and returns 1) a mask with outliers in a `xarray.DataArray` object and 2) a `pd.DataFrame` object, same but in tabular format
 
 ```python
 def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomposition=False):
