@@ -85,7 +85,7 @@ a substantially lower density than their neighbors.
 Breunig, Kriegel, Ng, and Sander (2000) LOF: identifying density-based local outliers.
 Proc. ACM SIGMOD
 
-### [Roust covariance](http://scikit-learn.org/stable/auto_examples/covariance/plot_mahalanobis_distances.html)
+### [Robust covariance](http://scikit-learn.org/stable/auto_examples/covariance/plot_mahalanobis_distances.html)
 The scikit-learn provides an object covariance.EllipticEnvelope that fits a
 robust covariance estimate to the data, and thus fits an ellipse to the central
 data points, ignoring points outside the central mode.
