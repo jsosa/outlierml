@@ -22,11 +22,11 @@ where `<initfile>` is a text file including the following information
 
 ```
 [outlierml]
-file          : NetCDF file path
-method        : <LOF> for Local Outlier Factor , <RC> for Robust Covariance , <IF> for Isolation Forest
-outputdir     : Output directory
-contamination : Contamination fraction from 0 to 1
-decomposition : True or False time series to deseasonalization
+file          = NetCDF file path
+method        = <LOF> for Local Outlier Factor , <RC> for Robust Covariance , <IF> for Isolation Forest
+outputdir     = Output directory
+contamination = Contamination fraction from 0 to 1
+decomposition = True or False time series to deseasonalization
 ```
 
 The outlierml module can also be called via
