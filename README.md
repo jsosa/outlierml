@@ -54,6 +54,7 @@ def run_outlierml(nc,method,contamination,varname,latname,lonname,timname,decomp
     Returns:
     foo : (xarray.DataArray) containing freq, mean, std
     csv : (pd.DataFrame) containing time, lat, lon, value, mean, std
+    """
  ```
 
 ### [Isolation forest](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
