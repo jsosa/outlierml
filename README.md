@@ -2,6 +2,20 @@
 
 `outlierml` is a small library to detect outliers in 2D arrays based on scikit-learn outlier detection functions: Local Outlier Factor (LOF), Robust Covariance (RC) and Isolation Forest (IF).
 
+## INSTALLATION
+
+Just run this line
+
+``` pip install git+https://github.com/jsosa/outlierml.git```
+
+## DEPENDENCIES
+
+- [Pandas](https://pandas.pydata.org/)
+- [xarray](http://xarray.pydata.org/en/stable/)
+- [scikit-learn](http://scikit-learn.org/stable/)
+
+Pandas, xarray and scikit-learn
+
 It includes a command-line tool that can be called through
 
 ```>> outlierml -i <initfile>```
@@ -25,7 +39,7 @@ from outlierml import run_outlierml
 
 where `run_outlierml` is a function which receives the `xarray.Dataset` object to be analised and returns 1) a mask containing outliers in a `xarray.DataArray` object and a `pd.DataFrame` object
 
-### Isolation forest
+### [Isolation forest](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
 One efficient way of performing outlier detection in high-dimensional datasets
 is to use random forests. The ensemble.IsolationForest ‘isolates’ observations
 by randomly selecting a feature and then randomly selecting a split value between
@@ -36,7 +50,7 @@ the maximum and minimum values of the selected feature.
 Liu, Fei Tony, Ting, Kai Ming and Zhou, Zhi-Hua. “Isolation forest.” Data Mining, 2008.
 ICDM‘08. Eighth IEEE International Conference on.
 
-### Local outlier factor
+### [Local outlier factor](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html)
 The neighbors.LocalOutlierFactor (LOF) algorithm computes a score (called local outlier factor)
 reflecting the degree of abnormality of the observations. It measures the local density deviation
 of a given data point with respect to its neighbors. The idea is to detect the samples that have
@@ -47,7 +61,7 @@ a substantially lower density than their neighbors.
 Breunig, Kriegel, Ng, and Sander (2000) LOF: identifying density-based local outliers.
 Proc. ACM SIGMOD
 
-### Roust covariance
+### [Roust covariance](http://scikit-learn.org/stable/auto_examples/covariance/plot_mahalanobis_distances.html)
 The scikit-learn provides an object covariance.EllipticEnvelope that fits a
 robust covariance estimate to the data, and thus fits an ellipse to the central
 data points, ignoring points outside the central mode.
