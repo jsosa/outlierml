@@ -2,13 +2,13 @@
 
 `outlierml` is a small library to detect outliers in 2D arrays based on scikit-learn outlier detection functions: Local Outlier Factor (LOF), Robust Covariance (RC) and Isolation Forest (IF).
 
-## Installation
+### Installation
 
 Just run this line
 
 ``` pip install git+https://github.com/jsosa/outlierml.git```
 
-## Dependencies
+### Dependencies
 
 - [Pandas](https://pandas.pydata.org/)
 - [xarray](http://xarray.pydata.org/en/stable/)
