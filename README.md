@@ -1,6 +1,6 @@
 # outlierml
 
-`outlierml` is a small library to detect outliers in 2D arrays based on scikit-learn outlier detection functions: Local Outlier Factor (LOF), Robust Covariance (RC) and Isolation Forest (IF).
+`outlierml` is a small python library to detect outliers in 2D arrays based on scikit-learn outlier detection functions: Local Outlier Factor (LOF), Robust Covariance (RC) and Isolation Forest (IF).
 
 ### Installation
 
@@ -13,6 +13,8 @@ Just run this line
 - [Pandas](https://pandas.pydata.org/)
 - [xarray](http://xarray.pydata.org/en/stable/)
 - [scikit-learn](http://scikit-learn.org/stable/)
+
+### Usage
 
 It includes a command-line tool that can be called through
 
